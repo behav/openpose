@@ -1,0 +1,15 @@
+Hi Rick,
+
+Yes, singularity is a container system, similar to Docker. 
+If you want to test out openpose container, you can pull it down using the following:
+$ singularity pull shub://dp2ski/openpose_aci:rec
+on aci-i, then use
+$ singularity shell $name_of_image.simg
+to have a shell within the image. openpose is installed within /openpose-master 
+
+Normally what we would do from this point is figure out what commands you would want to be able to run, and create a module file, so you could run openpose without having to shell into the image every time. 
+
+Once you and Ori have a chance to take a look at that, let me know if you think that will work, and I can go ahead and make the module file, and walk you through getting it set up. 
+
+Best,
+Drew
